@@ -10,27 +10,26 @@ import javax.swing.JOptionPane;
  *
  * @author Caio
  */
-public class JDlgPteUsuarios extends javax.swing.JDialog {
+public class JDLgPteAdministradores extends javax.swing.JDialog {
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JDlgPteUsuarios.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JDLgPteAdministradores.class.getName());
 
     /**
-     * Creates new form JDlgPteUsuarios
+     * Creates new form JDLgPteAdministradores
      */
-    public JDlgPteUsuarios(java.awt.Frame parent, boolean modal) {
+    public JDLgPteAdministradores(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        setTitle("Cadastro de Usuários");
+        setTitle("Cadastro de Administradoes");
         setLocationRelativeTo(null);
 
         jTxtNome.setEnabled(false);
         jTxtCodigo.setEnabled(false);
-        jTxtApelido.setEnabled(false);
-        jFmtCpf.setEnabled(false);
-        jFmtDataDeNascimento.setEnabled(false);
-        jCboNivel.setEnabled(false);
-        jChbAtivo.setEnabled(false);
+        jFmtEmail.setEnabled(false);
         jPwdSenha.setEnabled(false);
+        jCboAcesso.setEnabled(false);
+        jFmtDataDeCadastro.setEnabled(false);
+        jFmtUltimoAcesso.setEnabled(false);
         jBtnConfirmar.setEnabled(false);
         jBtnCancelar.setEnabled(false);
 
@@ -39,12 +38,11 @@ public class JDlgPteUsuarios extends javax.swing.JDialog {
     public void habilitar(boolean valor) {
         jTxtNome.setEnabled(valor);
         jTxtCodigo.setEnabled(valor);
-        jTxtApelido.setEnabled(valor);
-        jFmtCpf.setEnabled(valor);
-        jFmtDataDeNascimento.setEnabled(valor);
-        jCboNivel.setEnabled(valor);
-        jChbAtivo.setEnabled(valor);
+        jFmtEmail.setEnabled(valor);
         jPwdSenha.setEnabled(valor);
+        jCboAcesso.setEnabled(valor);
+        jFmtDataDeCadastro.setEnabled(valor);
+        jFmtUltimoAcesso.setEnabled(valor);
         jBtnConfirmar.setEnabled(valor);
         jBtnCancelar.setEnabled(valor);
         jBtnPesquisar.setEnabled(!valor);
@@ -62,50 +60,43 @@ public class JDlgPteUsuarios extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
-        jLblCodigo = new javax.swing.JLabel();
-        jLblNome = new javax.swing.JLabel();
-        jTxtCodigo = new javax.swing.JTextField();
-        jTxtNome = new javax.swing.JTextField();
-        jLblApelido = new javax.swing.JLabel();
-        jTxtApelido = new javax.swing.JTextField();
-        jLblCpf = new javax.swing.JLabel();
-        jLblSenha = new javax.swing.JLabel();
-        jLblDataDeNascimento = new javax.swing.JLabel();
-        jLblNivel = new javax.swing.JLabel();
-        jFmtCpf = new javax.swing.JFormattedTextField();
-        jFmtDataDeNascimento = new javax.swing.JFormattedTextField();
-        jPwdSenha = new javax.swing.JPasswordField();
-        jCboNivel = new javax.swing.JComboBox<>();
-        jChbAtivo = new javax.swing.JCheckBox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jBtnIncluir = new javax.swing.JButton();
         jBtnAlterar = new javax.swing.JButton();
         jBtnExcluir = new javax.swing.JButton();
+        jLblSenha = new javax.swing.JLabel();
         jBtnConfirmar = new javax.swing.JButton();
+        jLblDataDeCadastro = new javax.swing.JLabel();
         jBtnCancelar = new javax.swing.JButton();
+        jLblAcesso = new javax.swing.JLabel();
         jBtnPesquisar = new javax.swing.JButton();
+        jLblCodigo = new javax.swing.JLabel();
+        jFmtDataDeCadastro = new javax.swing.JFormattedTextField();
+        jLblNome = new javax.swing.JLabel();
+        jPwdSenha = new javax.swing.JPasswordField();
+        jTxtCodigo = new javax.swing.JTextField();
+        jCboAcesso = new javax.swing.JComboBox<>();
+        jTxtNome = new javax.swing.JTextField();
+        jLblEmail = new javax.swing.JLabel();
+        jLblUltimoAcesso = new javax.swing.JLabel();
+        jFmtUltimoAcesso = new javax.swing.JFormattedTextField();
+        jFmtEmail = new javax.swing.JFormattedTextField();
 
-        jLabel3.setText("jLabel3");
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jLblCodigo.setText("Código");
-
-        jLblNome.setText("Nome");
-
-        jLblApelido.setText("Apelido");
-
-        jLblCpf.setText("CPF");
-
-        jLblSenha.setText("Senha");
-
-        jLblDataDeNascimento.setText("Data de Nascimento");
-
-        jLblNivel.setText("Nível");
-
-        jCboNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jChbAtivo.setText("ativo");
 
         jBtnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnIncluir.setText("Incluir");
@@ -119,17 +110,33 @@ public class JDlgPteUsuarios extends javax.swing.JDialog {
         jBtnExcluir.setText("Excluir");
         jBtnExcluir.addActionListener(this::jBtnExcluirActionPerformed);
 
+        jLblSenha.setText("Senha");
+
         jBtnConfirmar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/confirmar.png"))); // NOI18N
         jBtnConfirmar.setText("Confirmar");
         jBtnConfirmar.addActionListener(this::jBtnConfirmarActionPerformed);
+
+        jLblDataDeCadastro.setText("Data de Cadastro");
 
         jBtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnCancelar.setText("Cancelar");
         jBtnCancelar.addActionListener(this::jBtnCancelarActionPerformed);
 
+        jLblAcesso.setText("Acesso");
+
         jBtnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnPesquisar.setText("Pesquisa");
         jBtnPesquisar.addActionListener(this::jBtnPesquisarActionPerformed);
+
+        jLblCodigo.setText("Código");
+
+        jLblNome.setText("Nome");
+
+        jCboAcesso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLblEmail.setText("Email");
+
+        jLblUltimoAcesso.setText("Último Acesso");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -138,55 +145,48 @@ public class JDlgPteUsuarios extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLblSenha)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jTxtNome)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTxtNome)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLblApelido)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(jTxtApelido))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCboNivel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLblNivel)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLblCpf)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(jFmtCpf))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLblDataDeNascimento)
-                                    .addComponent(jFmtDataDeNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLblEmail)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jFmtEmail))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCboAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLblAcesso)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTxtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLblCodigo)
-                                            .addComponent(jLblNome)
-                                            .addComponent(jPwdSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jChbAtivo))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jBtnIncluir)
-                                        .addGap(12, 12, 12)
-                                        .addComponent(jBtnAlterar)
-                                        .addGap(12, 12, 12)
-                                        .addComponent(jBtnExcluir)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jBtnConfirmar)
-                                        .addGap(12, 12, 12)
-                                        .addComponent(jBtnCancelar)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBtnPesquisar)))
-                        .addContainerGap())))
+                                .addComponent(jLblSenha)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jPwdSenha))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLblDataDeCadastro)
+                            .addComponent(jFmtDataDeCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jBtnIncluir)
+                        .addGap(12, 12, 12)
+                        .addComponent(jBtnAlterar)
+                        .addGap(12, 12, 12)
+                        .addComponent(jBtnExcluir)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBtnConfirmar)
+                        .addGap(12, 12, 12)
+                        .addComponent(jBtnCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jBtnPesquisar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jFmtUltimoAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTxtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLblCodigo)
+                            .addComponent(jLblNome)
+                            .addComponent(jLblUltimoAcesso))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,35 +201,35 @@ public class JDlgPteUsuarios extends javax.swing.JDialog {
                 .addComponent(jTxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblApelido)
-                    .addComponent(jLblNivel))
+                    .addComponent(jLblEmail)
+                    .addComponent(jLblAcesso))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtApelido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCboNivel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCboAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFmtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLblCpf)
-                    .addComponent(jLblDataDeNascimento))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLblDataDeCadastro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jFmtDataDeCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLblSenha)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPwdSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jFmtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFmtDataDeNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLblUltimoAcesso)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLblSenha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPwdSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jChbAtivo))
-                .addGap(33, 33, 33)
+                .addComponent(jFmtUltimoAcesso, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnIncluir, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnConfirmar)
                     .addComponent(jBtnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBtnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jBtnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBtnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         pack();
@@ -290,7 +290,7 @@ public class JDlgPteUsuarios extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                JDlgPteUsuarios dialog = new JDlgPteUsuarios(new javax.swing.JFrame(), true);
+                JDLgPteAdministradores dialog = new JDLgPteAdministradores(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -309,20 +309,20 @@ public class JDlgPteUsuarios extends javax.swing.JDialog {
     private javax.swing.JButton jBtnExcluir;
     private javax.swing.JButton jBtnIncluir;
     private javax.swing.JButton jBtnPesquisar;
-    private javax.swing.JComboBox<String> jCboNivel;
-    private javax.swing.JCheckBox jChbAtivo;
-    private javax.swing.JFormattedTextField jFmtCpf;
-    private javax.swing.JFormattedTextField jFmtDataDeNascimento;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLblApelido;
+    private javax.swing.JComboBox<String> jCboAcesso;
+    private javax.swing.JFormattedTextField jFmtDataDeCadastro;
+    private javax.swing.JFormattedTextField jFmtEmail;
+    private javax.swing.JFormattedTextField jFmtUltimoAcesso;
+    private javax.swing.JLabel jLblAcesso;
     private javax.swing.JLabel jLblCodigo;
-    private javax.swing.JLabel jLblCpf;
-    private javax.swing.JLabel jLblDataDeNascimento;
-    private javax.swing.JLabel jLblNivel;
+    private javax.swing.JLabel jLblDataDeCadastro;
+    private javax.swing.JLabel jLblEmail;
     private javax.swing.JLabel jLblNome;
     private javax.swing.JLabel jLblSenha;
+    private javax.swing.JLabel jLblUltimoAcesso;
     private javax.swing.JPasswordField jPwdSenha;
-    private javax.swing.JTextField jTxtApelido;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTxtCodigo;
     private javax.swing.JTextField jTxtNome;
     // End of variables declaration//GEN-END:variables
