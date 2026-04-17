@@ -51,32 +51,38 @@ public class JFrmPtePrincipal extends javax.swing.JFrame {
 
         jMnuCadastros.setText("Cadastros");
 
+        jMniUsuarios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
         jMniUsuarios.setText("Usuários");
         jMniUsuarios.addActionListener(this::jMniUsuariosActionPerformed);
         jMnuCadastros.add(jMniUsuarios);
 
+        jMniClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente.png"))); // NOI18N
         jMniClientes.setText("Clientes");
         jMniClientes.addActionListener(this::jMniClientesActionPerformed);
         jMnuCadastros.add(jMniClientes);
 
+        jMniFornecedores.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniFornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fornecedor.png"))); // NOI18N
         jMniFornecedores.setText("Fornecedores");
         jMniFornecedores.addActionListener(this::jMniFornecedoresActionPerformed);
         jMnuCadastros.add(jMniFornecedores);
 
+        jMniJogos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniJogos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/jogos.png"))); // NOI18N
         jMniJogos.setText("Jogos");
         jMniJogos.addActionListener(this::jMniJogosActionPerformed);
         jMnuCadastros.add(jMniJogos);
 
+        jMniAdministradoes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniAdministradoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/admin.png"))); // NOI18N
         jMniAdministradoes.setText("Administradores");
         jMniAdministradoes.addActionListener(this::jMniAdministradoesActionPerformed);
         jMnuCadastros.add(jMniAdministradoes);
         jMnuCadastros.add(jSeparator1);
 
+        jMniSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
         jMniSair.setText("Sair");
         jMniSair.addActionListener(this::jMniSairActionPerformed);
