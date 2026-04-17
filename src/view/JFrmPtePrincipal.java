@@ -45,7 +45,6 @@ public class JFrmPtePrincipal extends javax.swing.JFrame {
         jMniCompras = new javax.swing.JMenuItem();
         jMniItensCompra = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMniSairM = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,11 +108,6 @@ public class JFrmPtePrincipal extends javax.swing.JFrame {
         jMnuMovimentos.add(jMniItensCompra);
         jMnuMovimentos.add(jSeparator2);
 
-        jMniSairM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
-        jMniSairM.setText("Sair");
-        jMniSairM.addActionListener(this::jMniSairMActionPerformed);
-        jMnuMovimentos.add(jMniSairM);
-
         jMenuBar1.add(jMnuMovimentos);
 
         setJMenuBar(jMenuBar1);
@@ -167,11 +161,6 @@ public class JFrmPtePrincipal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMniSairActionPerformed
 
-    private void jMniSairMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMniSairMActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_jMniSairMActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -206,7 +195,6 @@ public class JFrmPtePrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMniItensCompra;
     private javax.swing.JMenuItem jMniJogos;
     private javax.swing.JMenuItem jMniSair;
-    private javax.swing.JMenuItem jMniSairM;
     private javax.swing.JMenuItem jMniUsuarios;
     private javax.swing.JMenuItem jMniVendas;
     private javax.swing.JMenuItem jMniVendasItens;
