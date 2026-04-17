@@ -20,7 +20,7 @@ public class JDLgPteJogos extends javax.swing.JDialog {
     public JDLgPteJogos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        setTitle("Cadastro de Jogos");
+        setTitle("Cadastro de Jogo");
         setLocationRelativeTo(null);
 
         jTxtCodigo.setEnabled(false);
