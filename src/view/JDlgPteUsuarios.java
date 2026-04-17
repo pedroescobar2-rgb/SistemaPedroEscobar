@@ -23,7 +23,6 @@ public class JDlgPteUsuarios extends javax.swing.JDialog {
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);
 
-        jTxtNome.setEnabled(false);
         jTxtCodigo.setEnabled(false);
         jTxtApelido.setEnabled(false);
         jFmtCpf.setEnabled(false);
