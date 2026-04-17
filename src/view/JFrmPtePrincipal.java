@@ -51,6 +51,7 @@ public class JFrmPtePrincipal extends javax.swing.JFrame {
         jMnuCadastros.setText("Cadastros");
 
         jMniUsuarios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMniUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
         jMniUsuarios.setText("Usuários");
         jMniUsuarios.addActionListener(this::jMniUsuariosActionPerformed);
         jMnuCadastros.add(jMniUsuarios);
