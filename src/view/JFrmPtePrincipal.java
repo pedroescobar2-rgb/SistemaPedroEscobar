@@ -91,18 +91,22 @@ public class JFrmPtePrincipal extends javax.swing.JFrame {
 
         jMnuMovimentos.setText("Movimentos");
 
+        jMniVendas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniVendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vendas.png"))); // NOI18N
         jMniVendas.setText("Vendas");
         jMnuMovimentos.add(jMniVendas);
 
+        jMniVendasItens.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniVendasItens.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/vendas_itens.png"))); // NOI18N
         jMniVendasItens.setText("Vendas Intens");
         jMnuMovimentos.add(jMniVendasItens);
 
+        jMniCompras.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniCompras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/compras.png"))); // NOI18N
         jMniCompras.setText("Compras");
         jMnuMovimentos.add(jMniCompras);
 
+        jMniItensCompra.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMniItensCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/itens_compra.png"))); // NOI18N
         jMniItensCompra.setText("Itens Compra");
         jMnuMovimentos.add(jMniItensCompra);
