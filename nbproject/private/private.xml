@@ -10,6 +10,16 @@
             <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/bean/PteFornecedores.java</file>
             <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/bean/PteJogos.java</file>
             <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/dao/DaoAbstract.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/dao/DaoPteUsuarios.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/view/JDLgPteAdministradores.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/view/JDLgPteFornecedores.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/view/jFrmPteLogin.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/view/JDlgPteUsuarios.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/dao/DaoPteAdministradores.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/dao/DaoPteClientes.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/dao/DaoPteCompras.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/dao/DaoPteFornecedores.java</file>
+            <file>file:/C:/Users/Caio/Documents/NetBeansProjects/SistemaPedroEscobar/src/dao/DaoPteJogos.java</file>
         </group>
     </open-files>
 </project-private>
