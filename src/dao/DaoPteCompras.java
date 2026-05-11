@@ -4,7 +4,7 @@
  */
 package dao;
 
-import bean.PteUsuarios;
+import bean.PteCompras;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -16,10 +16,9 @@ import java.util.logging.Logger;
  *
  * @author Caio
  */
-public class DaoPteUsuarios {
-
+public class DaoPteCompras {
     public void insert(Object object) {
-        PteUsuarios pteUsuarios = (PteUsuarios) object;
+        PteCompras pteCompras = (PteCompras) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -28,20 +27,20 @@ public class DaoPteUsuarios {
             password = "pedro_escobar";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "insert into pte_usuarios values (?,?,?,?,?,?,?,?)";
+            String sql = "insert into pte_compras values (?,?,?,?,?,?,?)";
             PreparedStatement pst = cnt.prepareStatement(sql);
-            pst.setInt(1, pteUsuarios.getPteIdUsuarios());
-            pst.setString(2, pteUsuarios.getPteNome());
-            pst.setString(3, pteUsuarios.getPteApelido());
-            pst.setString(4, pteUsuarios.getPteCpf());
-            pst.setDate(5, null); //pte_datanascimento
-            pst.setString(7, pteUsuarios.getPteSenha());
-            pst.setString(8, pteUsuarios.getPteAtivo());
+            pst.setInt(1, pteCompras.getPteIdCompras());
+            pst.setInt(2, pteCompras.getPteUsuarios());
+            pst.setDate(3, null); //PteCompra
+            pst.setString(4, pteCompras.getPteValor());
+            pst.setString(5, pteCompras.getPteFormaPagamento());
+            pst.setString(6, pteCompras.getPteStatusPagamento());
+            pst.setString(7, pteCompras.getPteCodigoTransacao());
             pst.executeUpdate();
         } catch (ClassNotFoundException ex) {
-            System.getLogger(DaoPteUsuarios.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(DaoPteCompras.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         } catch (SQLException ex) {
-            System.getLogger(DaoPteUsuarios.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(DaoPteCompras.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         } 
 
     }

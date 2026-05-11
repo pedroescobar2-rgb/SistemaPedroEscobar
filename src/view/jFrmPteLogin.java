@@ -4,18 +4,20 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Caio
  */
-public class JFqrmPteLogin extends javax.swing.JFrame {
+public class jFrmPteLogin extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JFqrmPteLogin.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(jFrmPteLogin.class.getName());
 
     /**
-     * Creates new form JFqrmPteLogin
+     * Creates new form jFrmPteLogin
      */
-    public JFqrmPteLogin() {
+    public jFrmPteLogin() {
         initComponents();
     }
 
@@ -30,11 +32,11 @@ public class JFqrmPteLogin extends javax.swing.JFrame {
 
         jLblLogin = new javax.swing.JLabel();
         jLblUsuario = new javax.swing.JLabel();
-        jPwdSenha = new javax.swing.JPasswordField();
         jLblSenha = new javax.swing.JLabel();
         jTxtUsuario = new javax.swing.JTextField();
+        jPwfSenha = new javax.swing.JPasswordField();
         jBtnConfirmar = new javax.swing.JButton();
-        jBtnCancalar = new javax.swing.JButton();
+        jBtnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,13 +44,13 @@ public class JFqrmPteLogin extends javax.swing.JFrame {
 
         jLblUsuario.setText("Usuário");
 
-        jPwdSenha.addActionListener(this::jPwdSenhaActionPerformed);
-
         jLblSenha.setText("Senha");
 
         jBtnConfirmar.setText("Confirmar");
+        jBtnConfirmar.addActionListener(this::jBtnConfirmarActionPerformed);
 
-        jBtnCancalar.setText("Cancelar");
+        jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(this::jBtnCancelarActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,49 +59,64 @@ public class JFqrmPteLogin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(jLblLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(74, 74, 74)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLblSenha)
+                            .addComponent(jLblUsuario)
+                            .addComponent(jTxtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                            .addComponent(jPwfSenha)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jBtnConfirmar)
-                                .addGap(36, 36, 36)
-                                .addComponent(jBtnCancalar))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLblUsuario)
-                                .addComponent(jLblSenha)
-                                .addComponent(jTxtUsuario)
-                                .addComponent(jPwdSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)))))
-                .addContainerGap(82, Short.MAX_VALUE))
+                        .addGap(175, 175, 175)
+                        .addComponent(jLblLogin))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(jBtnConfirmar)
+                        .addGap(29, 29, 29)
+                        .addComponent(jBtnCancelar)))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLblLogin)
-                .addGap(34, 34, 34)
+                .addContainerGap()
+                .addComponent(jLblLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
                 .addComponent(jLblUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTxtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(20, 20, 20)
                 .addComponent(jLblSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPwdSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jPwfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnConfirmar)
-                    .addComponent(jBtnCancalar))
-                .addContainerGap(61, Short.MAX_VALUE))
+                    .addComponent(jBtnCancelar))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPwdSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPwdSenhaActionPerformed
+    private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPwdSenhaActionPerformed
+        String usuario = jTxtUsuario.getText();
+        String senha = jPwfSenha.getText();
+        
+        if(usuario.equals("Escobar") && senha.equals("123")) {
+        JFrmPtePrincipal jFrmPtePrincipal = new JFrmPtePrincipal();
+        jFrmPtePrincipal.setVisible(true);
+        
+        this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuário ou Senha Inválidos");
+        }
+    }//GEN-LAST:event_jBtnConfirmarActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,16 +140,16 @@ public class JFqrmPteLogin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new JFqrmPteLogin().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new jFrmPteLogin().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBtnCancalar;
+    private javax.swing.JButton jBtnCancelar;
     private javax.swing.JButton jBtnConfirmar;
     private javax.swing.JLabel jLblLogin;
     private javax.swing.JLabel jLblSenha;
     private javax.swing.JLabel jLblUsuario;
-    private javax.swing.JPasswordField jPwdSenha;
+    private javax.swing.JPasswordField jPwfSenha;
     private javax.swing.JTextField jTxtUsuario;
     // End of variables declaration//GEN-END:variables
 }

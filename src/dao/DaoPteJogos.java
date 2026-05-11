@@ -4,7 +4,7 @@
  */
 package dao;
 
-import bean.PteUsuarios;
+import bean.PteJogos;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -16,10 +16,10 @@ import java.util.logging.Logger;
  *
  * @author Caio
  */
-public class DaoPteUsuarios {
+public class DaoPteJogos {
 
     public void insert(Object object) {
-        PteUsuarios pteUsuarios = (PteUsuarios) object;
+        PteJogos pteJogos = (PteJogos) object;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
@@ -28,20 +28,21 @@ public class DaoPteUsuarios {
             password = "pedro_escobar";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "insert into pte_usuarios values (?,?,?,?,?,?,?,?)";
+            String sql = "insert into pte_jogos values (?,?,?,?,?,?,?,?)";
             PreparedStatement pst = cnt.prepareStatement(sql);
-            pst.setInt(1, pteUsuarios.getPteIdUsuarios());
-            pst.setString(2, pteUsuarios.getPteNome());
-            pst.setString(3, pteUsuarios.getPteApelido());
-            pst.setString(4, pteUsuarios.getPteCpf());
-            pst.setDate(5, null); //pte_datanascimento
-            pst.setString(7, pteUsuarios.getPteSenha());
-            pst.setString(8, pteUsuarios.getPteAtivo());
+            pst.setInt(1, pteJogos.getPteIdJogo());
+            pst.setInt(2, pteJogos.getPteFornecedor());
+            pst.setString(3, pteJogos.getPteTitulo());
+            pst.setString(4, pteJogos.getPteDescricao());
+            pst.setString(5, pteJogos.getPtePlataforma());
+            pst.setString(6, pteJogos.getPteGenero());
+            pst.setString(7, pteJogos.getPtePreco());
+            pst.setDate(8, null); //DataLancamento
             pst.executeUpdate();
         } catch (ClassNotFoundException ex) {
-            System.getLogger(DaoPteUsuarios.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(DaoPteJogos.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         } catch (SQLException ex) {
-            System.getLogger(DaoPteUsuarios.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+            System.getLogger(DaoPteJogos.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
         } 
 
     }
